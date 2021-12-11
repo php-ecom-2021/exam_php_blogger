@@ -1,5 +1,19 @@
-@import "tailwindcss/base";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/components";
+.background-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 720px;
+}
 
-@import "tailwindcss/utilities";
+.background-cover{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 56.25%;
+}

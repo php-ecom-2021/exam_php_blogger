@@ -3,28 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
-    <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+        *{
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<body class="bg-gray-100 h-screen antialiased">
     <div id="app">
-        <header class="bg-blue-900 py-6">
+        <header class="bg-white py-6 shadow-md">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
+                    <a href="{{ url('/') }}" class="text-lg font-bold text-blue-500 no-underline">
+                        {{ config('app.name', 'Blogger') }}
                     </a>
                 </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
+                <nav class="space-x-4 text-blue-500">
+                    <a class="no-underline hover:underline" href="/">Home</a>
+                    <a class="no-underline hover:underline" href="/blog">Blog</a>
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
@@ -44,8 +46,12 @@
                 </nav>
             </div>
         </header>
-
-        @yield('content')
+        <div>
+            @yield('content')
+        </div>
+        <div>
+            @include('layouts.footer')
+        </div>
     </div>
 </body>
 </html>
