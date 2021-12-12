@@ -84,21 +84,14 @@ class PostsController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg|max:5048',
         ]);
-        /* take in original image name if image has been changed */
-        $imageName = $request->file('image')->getClientOriginalName();
-        /* create a new name for the image */
-        $newImageName = time().'_'.$imageName;
-        /* store the new image */
-        $request->image->move(public_path('images'), $newImageName);
+
         /* then we update the already existing post with the new data */
         Post::where('slug', $slug)
         ->update([
             'title' => $request->title,
             'description' => $request->description,
             'slug' => $slug,
-            'image_path' => $newImageName,
             'user_id' => auth()->user()->id
         ]);
         /* when the data has been updated in the db, we redirect the user to the /blog page and put some feedback that their action was successul */

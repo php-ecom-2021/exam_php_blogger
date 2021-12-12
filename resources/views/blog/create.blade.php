@@ -1,10 +1,10 @@
 @extends('layouts.app')
 <!--
-    this view is used to extend the layouts.app and is used to create a post
+    this view is used to extend the layouts/app and is used to create a post
     first we need to create a form, which action points to the place we want to submit it
     set the enctype to multipart so it accepts files as well
-    first thing a form even needs to work in laravel is @csrf, a hidden input for that aids security with cross site request forgery
-    next we name our inputs and also set up the @error so we can see feedback if anything goes wrong during submition of data
+    first thing a form even needs to work in laravel is csrf, a hidden input for that aids security with cross site request forgery
+    next we name our inputs and also set up the error so we can see feedback if anything goes wrong during submition of data
 -->
 @section('content')
 
