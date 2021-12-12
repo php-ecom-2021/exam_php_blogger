@@ -21,17 +21,35 @@
         <?php foreach($posts as $post) : ?>
         <article class="flex my-24">
             <div class="w-full">
-                <!-- <img src="{{asset('images/'.$post->image_path)}}"
-                class="w-full"
-                alt=""> -->
                 <div
                     style="background-image: url('{{asset("images/".$post->image_path)}}');"
                     class="background-contain"
                 ></div>
             </div>
             <div class="bg-white w-full p-20">
-                <h2 class="text-4xl font-bold">{{$post->title}}</h2>
-                <span>By <a href="" class="font-bold italic text-blue-500">{{$post->user->name}}</a>, Created on {{date('jS M Y', strtotime($post->updated_at))}}</span>
+                <div>
+                    <div class="flex justify-between">
+                        <h2 class="text-4xl font-bold">{{$post->title}}</h2>
+                        @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+                        <div>
+                            <span>
+                                <a
+                                class="text-blue-500 font-bold" 
+                                href="/blog/{{$post->slug}}/edit">Edit</a>
+                            </span>
+                            <span>
+                                <form action="/blog/{{$post->slug}}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    
+                                    <button class="text-red-500 font-bold" type="submit">Delete</button>
+                                </form>
+                            </span>
+                        </div>
+                        @endif
+                    </div>
+                    <span>By <a href="" class="font-bold italic text-blue-500">{{$post->user->name}}</a>, Created on {{date('jS M Y', strtotime($post->updated_at))}}</span>
+                </div>
 
                 <p class="text-xl font-light py-8">
                     {{$post->description}}
