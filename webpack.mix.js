@@ -10,7 +10,9 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+/*
+  here we have required tailwind so we can use it inside our code
+*/
 mix
   .js('resources/js/app.js', 'public/js')
   .postCss('resources/css/app.css', 'public/css', [

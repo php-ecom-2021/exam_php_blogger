@@ -24,3 +24,6 @@
     background-size: contain;
     padding-top: 56.25%;
 }
+
+/* in here we pull in the tailwind classes and also write any extra custom css we might want or need */
+/* this file later gets processed into public/css */ 

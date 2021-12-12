@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { /* we will be using the default user migration */
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');

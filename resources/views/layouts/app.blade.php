@@ -1,4 +1,10 @@
 <!doctype html>
+<!-- 
+    main place, this is where we inject the rest of our views into
+    here we can put any 'reusable' components like the navigation
+    which means we can also link our css and js too and apply it to every othe .blade.php file since its just an extension
+    we can also create things like footer and @include it here, same principle as the nav, just a biit different
+ -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">

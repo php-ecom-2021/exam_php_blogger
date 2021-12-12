@@ -1,5 +1,10 @@
 @extends('layouts.app')
-
+<!-- 
+    this is what extends the / page technically
+    it has some static data that lets the user roam to other parts of the site such as register and also a preview of recent posts
+    only dynamic data we actually get is under recent posts where we will get up to 4 existing latest posts
+    the number of received post is defined under the index method in the controller by simply using the limmit method with a value of 4
+ -->
 @section('content')
     <div class="background-image grid grid-cols-1 m-auto">
         <div class="flex text-white">

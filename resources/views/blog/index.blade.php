@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+<!-- 
+    this is the main page for all blog posts
+    first thing we want to do is to check if the user is signed in
+    if he is is, then we show the "Create post" button so he can start posting stuff
+    further down, we take the data passed down from the controller and run a quick php foreach loop to create posts with the data
+    to load data for each post's properties we use {{$post->whatever-the-name-is}}
+ -->
 @section('content')
 
 <div class="w-4/5 m-auto">

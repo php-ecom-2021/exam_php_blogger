@@ -1,5 +1,8 @@
 @extends('layouts.app')
-
+<!-- 
+    the show template is for simply showing a singular post
+    here we receive and display the singular desired post by the slug given to the function from the url
+ -->
 @section('content')
 
 <div class="w-4/5 m-auto">

@@ -1,5 +1,11 @@
 @extends('layouts.app')
-
+<!-- 
+    the edit is used when a user wants to edit a post of his own
+    first we setup where the form should go, method and enctype
+    then we set up the @csrf and we have to "fake" the method we are gonna use by using @method('put') since a form only allows get and post
+    then we load the input field with the old post values so we know what the old/current version of the post is
+    we change whatever we change and when submitted, the post will be updated with the new data thanks to the controller
+ -->
 @section('content')
 
 <div class="w-4/5 m-auto">
