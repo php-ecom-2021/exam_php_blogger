@@ -500,6 +500,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .form-checkbox:checked:focus {
   border-color: transparent;
 }
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+.top-0 {
+  top: 0;
+}
 .m-auto {
   margin: auto;
 }

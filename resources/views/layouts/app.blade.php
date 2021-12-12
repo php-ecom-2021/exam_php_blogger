@@ -17,7 +17,7 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased">
     <div id="app">
-        <header class="bg-white py-6 shadow-md">
+        <header class="bg-white py-6 shadow-md sticky top-0">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-bold text-blue-500 no-underline">
