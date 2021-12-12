@@ -48,7 +48,7 @@
                     <h4 class="text-2xl font-bold mb-2">Post title</h4>
                     <p>Post description will go here. Hopefully something short...</p>
                     <a
-                    class="inline-block py-2 px-4 bg-blue-500 text-white rounded-full self-start mt-auto "
+                    class="inline-block py-2 px-4 bg-blue-500 text-white rounded-full self-end mt-auto "
                     href="">View</a>
                 </div>
             </article>

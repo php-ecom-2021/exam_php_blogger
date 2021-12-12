@@ -17,3 +17,10 @@
     background-size: cover;
     padding-top: 56.25%;
 }
+
+.background-contain{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 56.25%;
+}
