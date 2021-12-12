@@ -5,7 +5,7 @@
         <div class="flex text-white">
             <div class="m-auto sm:m-auto w-4/5 block text-center">
                 <h1 class="text-8xl font-bold mb-8">Welcome to <span class="text-blue-500">Blogger!</span></h1>
-                <a class="inline-block text-center bg-blue-500 font-bold py-4 px-8 rounded-full" href="/">Discover</a>
+                <a class="inline-block text-center bg-blue-500 font-bold py-4 px-8 rounded-full" href="/blog">Discover</a>
             </div>
         </div>
     </div>
@@ -18,8 +18,13 @@
         <div class="self-center">
             <h2 class="text-6xl font-bold pb-8">Having trouble connecting?</h2>
             <p class="w-3/5 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit totam tenetur odio aspernatur quod, laborum ab praesentium aliquid. Excepturi aperiam sunt amet unde ab debitis nostrum neque at harum deleniti?</p>
-            <a href=""
+            @if(auth()->user())
+            <a href="/blog"
             class="inline-block bg-blue-500 text-white font-bold py-4 px-8 rounded-full">Start connecting today!</a>
+            @else
+            <a href="/register"
+            class="inline-block bg-blue-500 text-white font-bold py-4 px-8 rounded-full">Start connecting today!</a>
+            @endif
         </div>
     </section>
     <section class="text-center bg-white py-16">
@@ -35,24 +40,29 @@
         <h2 class="text-6xl font-bold pb-16">Blog</h2>
         <h3 class="text-4xl font-bold pb-8">Recent posts</h3>
         <div class="sm:grid grid-cols-2 gap-10">
+        
+        <?php foreach($posts as $post) : ?>
+
             <article class="flex">
                 <div class="w-full ">
                     <div
-                    style="background-image: url('https://images.pexels.com/photos/1837591/pexels-photo-1837591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"
+                    style="background-image: url('{{asset("images/".$post->image_path)}}');"
                     class="background-cover"
                     >
                 </div>
                     
                 </div>
                 <div class="w-full p-4 bg-white flex flex-col">
-                    <h4 class="text-2xl font-bold mb-2">Post title</h4>
-                    <p>Post description will go here. Hopefully something short...</p>
+                    <h4 class="text-2xl font-bold mb-2">{{$post->title}}</h4>
+                    <p>{{$post->description}}</p>
                     <a
                     class="inline-block py-2 px-4 bg-blue-500 text-white rounded-full self-end mt-auto "
-                    href="">View</a>
+                    href="/blog/{{$post->slug}}">View</a>
                 </div>
             </article>
             
+        <?php endforeach ?>
+
         </div>
     </section>
 @endsection

@@ -507,12 +507,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-0 {
   top: 0;
 }
-.float-right {
-  float: right;
-}
-.float-left {
-  float: left;
-}
 .m-auto {
   margin: auto;
 }
@@ -886,9 +880,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.underline {
-  text-decoration: underline;
 }
 .no-underline {
   text-decoration: none;

@@ -7,13 +7,13 @@
                     <a href="/">Home</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Blog</a>
+                    <a href="/blog">Blog</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Login</a>
+                    <a href="/login">Login</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Register</a>
+                    <a href="/register">Register</a>
                 </li>
             </ul>
         </div>
@@ -22,16 +22,16 @@
             <h3 class="text-2xl sm:font-bold">Find us</h3>
             <ul class="py-8 sm:text-s text-blue-500">
                 <li class="mb-4">
-                    <a href="/">What we do</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Address</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Phone</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Contact</a>
+                    <a href="/">Placeholder</a>
                 </li>
             </ul>
         </div>
@@ -40,16 +40,16 @@
             <h3 class="text-2xl sm:font-bold">Latest posts</h3>
             <ul class="py-8 sm:text-s text-blue-500">
                 <li class="mb-4">
-                    <a href="/">Why we love tech</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">Why we use Laravel</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">What is the meaning of life?</a>
+                    <a href="/">Placeholder</a>
                 </li>
                 <li class="mb-4">
-                    <a href="/">What is why?</a>
+                    <a href="/">Placeholder</a>
                 </li>
             </ul>
         </div>
